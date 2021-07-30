@@ -2,6 +2,9 @@
 
 // Declare function
 
+// create a function that randomly generates one random variable first
+// then do that four times
+
 function randomCityTripGenerator(cities){
     let random = Math.floor(Math.random() *cities.length);
     let finalCity = cities[random];
@@ -26,8 +29,6 @@ function randomFormOfEntertainment(entertain){
     console.log(finalFormOfEntertainment);
 }
 
-// create a function that randomly generates one random variable first
-// then do that four times
 
 // Setup Arguments to pass as parameters into functions
 
@@ -47,6 +48,7 @@ let choosenDestination = prompt("Does this trip sound good?");
         console.log("Enjoy your trip");
     }
     while(choosenDestination !== "yes"){
+        console.log("Here is your next set of choices:");
         randomCityTripGenerator(citiesToVisit);
         randomRestaurantGenerator(placesToEat);
         randomModeOfTransport(modeOfTransport);
