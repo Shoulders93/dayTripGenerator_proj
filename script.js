@@ -41,13 +41,21 @@ randomRestaurantGenerator(placesToEat);
 randomModeOfTransport(modeOfTransport);
 randomFormOfEntertainment(whatToDo);
 
-let choosenDestination;
-choosenDestination = prompt("Does this trip sound good?")
+let choosenDestination = prompt("Does this trip sound good?");
+
     if(choosenDestination == "yes"){
         console.log("Enjoy your trip");
     }
-    else if(choosenDestination !== "yes"){
-        console.log("Refresh your screen");
+    while(choosenDestination !== "yes"){
+        randomCityTripGenerator(citiesToVisit);
+        randomRestaurantGenerator(placesToEat);
+        randomModeOfTransport(modeOfTransport);
+        randomFormOfEntertainment(whatToDo);
+        choosenDestination = prompt("How about this trip instead?");{
+            if(choosenDestination == "yes"){
+                console.log("Enjoy your trip!");
+            }
+        }
     }
 
 // Execute function
